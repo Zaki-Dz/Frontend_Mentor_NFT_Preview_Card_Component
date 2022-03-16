@@ -1,0 +1,140 @@
+:root {
+	--light: #8bacd9;
+	--cyan: #00fff8;
+	--overlay: #00fff877;
+	--transition: 0.3s;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: roboto;
+	background-color: #0d1a2d;
+	min-height: 100vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.card {
+	max-width: 320px;
+	border-radius: 20px;
+	overflow: hidden;
+	padding: 20px;
+	padding-bottom: 30px;
+	background-color: #15273f;
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+	box-shadow: 0 0 40px;
+}
+
+.card .image {
+	background-color: red;
+	border-radius: 10px;
+	overflow: hidden;
+	position: relative;
+}
+
+.card .image img {
+	width: 100%;
+	margin-bottom: -5px;
+}
+
+.card .image span {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: var(--overlay);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	transition: var(--transition);
+	cursor: pointer;
+	opacity: 0;
+}
+
+.card .image:hover span {
+	opacity: 1;
+}
+
+.card .image span img {
+	width: 50px;
+}
+
+.card h3 {
+	color: white;
+	cursor: pointer;
+	transition: var(--transition);
+}
+
+.card h3:hover {
+	color: var(--cyan);
+}
+
+.card > p {
+	color: var(--light);
+	font-size: 14px;
+}
+
+.card .infos {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	border-bottom: 1px solid #2f4159;
+	padding-bottom: 20px;
+}
+
+.card .infos .price {
+	display: flex;
+	align-items: center;
+	color: var(--cyan);
+	gap: 5px;
+	font-size: 14px;
+}
+
+.card .infos .price img {
+	width: 10px;
+}
+
+.card .infos .limit {
+	display: flex;
+	align-items: center;
+	color: var(--light);
+	gap: 5px;
+	font-size: 14px;
+}
+
+.card .infos .limit img {
+	width: 20px;
+}
+
+.card .seller {
+	display: flex;
+	align-items: center;
+	gap: 20px;
+	color: var(--light);
+	font-size: 14px;
+}
+
+.card .seller img {
+	width: 30px;
+	border: 1px solid white;
+	border-radius: 50%;
+}
+
+.card .seller .name {
+	color: white;
+	cursor: pointer;
+	transition: var(--transition);
+}
+
+.card .seller .name:hover {
+	color: var(--cyan);
+}
